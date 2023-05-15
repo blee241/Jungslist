@@ -131,7 +131,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 .env
-node_modules
-package.json
-package_lock.json
-LICENSE
+.DS_Store

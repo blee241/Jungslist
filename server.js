@@ -22,5 +22,7 @@ app.use(express.urlencoded( { extended: true }));
 app.use(controllers);
 
 app.listen(PORT, () => {
+
     console.log(`Server opened at http://localhost:${PORT}/`);
 });
+

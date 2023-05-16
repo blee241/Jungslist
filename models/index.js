@@ -9,4 +9,4 @@ Listing.belongsTo(User, {
     foreignKey: 'customer_id'
 });
 
-module.exports = {User, Stroke};
+module.exports = {User, Listing};

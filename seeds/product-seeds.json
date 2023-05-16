@@ -1,0 +1,35 @@
+[
+    {
+        "customer_id": "1",
+        "product_name": "Macbook",
+        "category": "Laptop",
+        "product_condition": "New",
+        "quantity": "1",
+        "price": "500.00",
+        "brand": "Apple",
+        "description": "A nice new laptop unused and for sale",
+        "seller_location": "Atlanta"
+    },
+    {
+        "customer_id": "1",
+        "product_name": "Refrigerator",
+        "category": "Kitchen Appliances",
+        "product_condition": "Slightly Used",
+        "quantity": "1",
+        "price": "1000.00",
+        "brand": "Samsumg",
+        "description": "Old fridge for sale",
+        "seller_location": "Atlanta"
+    },
+    {
+        "customer_id": "2",
+        "product_name": "Table",
+        "category": "Home Decor",
+        "product_condition": "New",
+        "quantity": "2",
+        "price": "100.00",
+        "brand": "Ikea",
+        "description": "Unused and unneeded",
+        "seller_location": "Atlanta"
+    }
+]

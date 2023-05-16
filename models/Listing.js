@@ -1,7 +1,7 @@
-const { Model, Datatypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class User extends Model {}
+class Listing extends Model {}
 
 Listing.init({
     id: {
@@ -47,7 +47,8 @@ Listing.init({
         defaultValue: 'No description provided'
     },
     order_date_and_time: {
-        type: DataTypes.NOW
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
     },
     seller_location: {
         type: DataTypes.STRING
@@ -55,7 +56,7 @@ Listing.init({
 },{
     sequelize,
     freezeTablename: true,
-    modelName: 'Listing'
+    modelName: 'listing'
 });
 
 module.exports = Listing;

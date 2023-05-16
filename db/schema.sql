@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS jungs_db;
+CREATE DATABASE jungs_db;

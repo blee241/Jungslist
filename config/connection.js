@@ -14,7 +14,7 @@ if (process.env.JAWSDB_URL) {
         {
             host: 'localhost',
             dialect: 'mysql',
-            port: 3306//This is where my database lives in my computer.
+            PORT: 3001
         }
     );
 }

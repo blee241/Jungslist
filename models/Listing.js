@@ -1,4 +1,4 @@
-const { Model, Datatypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Listing extends Model {}
@@ -47,7 +47,8 @@ Listing.init({
         defaultValue: 'No description provided'
     },
     order_date_and_time: {
-        type: DataTypes.NOW
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
     },
     seller_location: {
         type: DataTypes.STRING

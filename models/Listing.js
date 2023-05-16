@@ -26,7 +26,7 @@ Listing.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    product_condition: {//product_condition
+    condition: {
         type: DataTypes.STRING,
         allowNull: false,
     },
@@ -55,6 +55,7 @@ Listing.init({
     }
 },{
     sequelize,
+    timestamps: false,
     freezeTablename: true,
     modelName: 'listing'
 });

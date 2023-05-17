@@ -1,9 +1,9 @@
 const router = require('express').Router();
 const { Listing } = require('../../models');
 
-// router.get('/', (req, res) => {
-//     res.json('From new-listing-page file')
-// })
+// /router.get('/', (req, res) => {
+// //     res.json('From new-listing-page file')
+// // })/ 
 
 router.get('/', async (req, res) => {
     const listData = await Listing.findAll({
@@ -25,5 +25,6 @@ router.get('/', async (req, res) => {
     console.log('this is easier to read', prettyList);
     res.render('new-listing', {prettyList} )
 })
+
 
 module.exports = router;

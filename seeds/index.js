@@ -8,6 +8,7 @@ const seedDatabase = async () => {
     await sequelize.sync({ force: true })
 
     await User.bulkCreate(userSeedData, {
+        individualHooks: true,
         returning: true
     })
 

@@ -5,15 +5,17 @@ const { Listing } = require("../../models");
 
 // localhost:3001/sell/user/:id
 router.get('/user/:user_id', async (req, res) => {
-    console.log('Im in the get route')
+
     const listingData = await Listing.findAll({
         where: {
             // This value needs to be changed depending on who logs in
             customer_id: req.params.user_id
         }
     })
-    res.json(listingData)
-    // res.render('sellpage', {listingData})
+    
+    const cleanListingData = listingData.map((listing) => listing.get({ plain: true }))
+
+    res.render('sellpage', {cleanListingData})
 })
 
 // localhost:3001/sell/delete_listing/:listing_id

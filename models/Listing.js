@@ -55,7 +55,7 @@ Listing.init({
     }
 },{
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTablename: true,
     modelName: 'listing'
 });

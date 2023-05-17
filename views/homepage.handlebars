@@ -4,37 +4,31 @@
                 <div class="flex justify-between items-center py-4 px-4">
                 <div><h2 class="font-bold text-3xl">JungList</h2></div>
                 <div class="flex space-x-8">
-                    <a href="#" class="font-bold text-1xl">My Account</a>
+                    <a href="/sign-up" class="font-bold text-1xl">Create Account</a>
                     <a href="#" class="font-bold text-1xl">Logout</a>
+                    <a href="/new-listing" class="font-bold text-1xl">Create Listing</a>
                 </div>
             </div>
         </nav>
     </header>
    <main class="bg-slate-500">
     
-        <main class="container">
-            <h3>Input your user info here!</h3>
-            <form id="userForm">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Username</label>
-                    <input type="username" class="form-control" id="userNameInput" aria-describedby="usernameHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
-                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="passwordInput">
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </main>
+    <main class="container">
+    <h3>Input your user info here!</h3>
+    <form class="form login-form">
+         <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password-login">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</main>
 
    </main>
-  
+
+  <script src="./js/login.js"></script>

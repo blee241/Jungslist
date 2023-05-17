@@ -26,7 +26,7 @@ Listing.init({
         type: DataTypes.STRING,
         allowNull: false,
     },
-    condition: {
+    product_condition: {
         type: DataTypes.STRING,
         allowNull: false,
     },

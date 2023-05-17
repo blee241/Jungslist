@@ -5,6 +5,7 @@ const searchPage = require('./search-page');
 const sellerPage = require('./seller-page');
 const newListingPage = require('./new-listing-page');
 
+
 // localhost:3001/p
 router.use('/', homepage);
 
@@ -13,6 +14,7 @@ router.use('/sign-up', signupPage);
 
 // localhost:3001/search
 router.use('/search', searchPage);
+
 
 // localhost:3001/sell
 router.use('/sell', sellerPage);

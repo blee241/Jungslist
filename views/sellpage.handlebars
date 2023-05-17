@@ -1,24 +1,21 @@
-
-
-
 <section class="container bg-neutral-400">
-  <button id="listings-go"   class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Back to Search</button>
-  <button id="listings-go"   class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Create Listing</button>
-  <button id="listings-go"   class="btn btn-primary  rounded-full bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Logout</button>
-    {{!-- Why won't this work? --}}
-    {{#each cleanListingData as |listing|}}
-        <section class='container lg' id="{{listing.id}}">
-            {{listing.product_condition}} {{listing.brand}} {{listing.product_name}} {{listing.category}} for ${{listing.price}}
-            <br>
-            Location: {{listing.seller_location}}
-            <br>
-            Posted {{listing.order_date_and_time}}
-            <br>
-            Item description: {{listing.description}}
-            <button class="delete-button" data-listing-id="{{listing.id}}">Delete Listing</button>
-            <hr>
-        </section>  
-    {{/each}}
+  <button id="listings-go-back" class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Back to Search</button>
+  <button id="listings-go-create" class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Create Listing</button>
+  <button id="listings-go-logout" class="btn btn-primary rounded-full bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Logout</button>
+  
+  {{#each cleanListingData as |listing|}}
+    <section class="container lg" id="{{listing.id}}">
+      {{listing.product_condition}} {{listing.brand}} {{listing.product_name}} {{listing.category}} for ${{listing.price}}
+      <br>
+      Location: {{listing.seller_location}}
+      <br>
+      Posted {{listing.order_date_and_time}}
+      <br>
+      Item description: {{listing.description}}
+      <button class="delete-button" data-listing-id="{{listing.id}}">Delete Listing</button>
+      <hr>
+    </section>  
+  {{/each}}
 </section>
 
 <script src="/js/delete-listing.js"></script>

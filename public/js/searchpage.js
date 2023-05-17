@@ -1,4 +1,4 @@
-const searchForm = document.getElementById('search-form');
+/*const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 
 searchForm.addEventListener('submit', async function(event) {
@@ -19,4 +19,22 @@ console.log("data")
   } catch (error) {
     console.error('Error:', error);
   }
-});
+});*/
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  // Get the value from the search input
+  const searchInput = document.getElementById('search-input');
+  const location = searchInput.value;
+
+  // Perform any actions you want with the search location
+  console.log('Search Location:', location);
+
+  // Reset the search input value
+  searchInput.value = '';
+}
+
+// Add an event listener to the submit button
+const searchButton = document.getElementById('search-button');
+searchButton.addEventListener('click', handleSubmit);

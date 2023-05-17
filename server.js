@@ -7,13 +7,15 @@ const sequelize = require('./config/connection');
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({ });
 
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-const app = express();
-const PORT = process.env.PORT || 3001;
+// Front end
+app.use(express.static(path.join(__dirname, '/public')));
 
 // For post http requests
 app.use(express.json());

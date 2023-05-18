@@ -10,8 +10,6 @@ router.use("/", pages);
 
 
 
-
-
 router.use('/listing', listing);
 
 

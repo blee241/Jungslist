@@ -12,11 +12,13 @@ const loginForm = async (event) => {
     });
 
     if (response.ok) {
-      const { userId } = await response.json();
+      
+      const resObj = await response.json();
+      // Storing the user ID in a variable to export it to searchpage-links.js
+      const exportThisID = resObj.user.id;
 
-      // Store the user ID in the session
-      sessionStorage.setItem('userId', userId);
-
+      localStorage.setItem('id', exportThisID);
+      
       // Redirect the browser to the search page
       const searchpage = '/search';
       window.location.replace(searchpage);

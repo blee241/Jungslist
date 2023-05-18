@@ -32,11 +32,36 @@ app.use(express.urlencoded( { extended: true }));
 
 app.use(controllers);
 
-sequelize.sync({force: false}).then(() => {
+// Route for user login
+app.post('/api/users/login', async (req, res) => {
+    try {
+      const { email, password } = req.body;
+  
+      // Find the user by email and password
+      const user = await models.User.findOne({ where: { email, user_password: password } });
+  
+      if (!user) {
+        return res.status(400).json({ message: 'Invalid email or password' });
+      }
+  
+      // Respond with the user ID
+      res.status(200).json({ userId: user.id });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  });
+  
+  sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => {
-        console.log(`The server is running on PORT ${PORT}`);
-    })
-});
+      console.log(`The server is running on PORT ${PORT}`);
+    });
+  });
+
+  
+  
+  
+  
 
 
 

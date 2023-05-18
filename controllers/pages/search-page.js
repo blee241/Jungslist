@@ -1,79 +1,56 @@
+
+
 const router = require('express').Router();
 const {Listing} = require("../../models");
 
+//localhost:3001/search
 router.get('/', async (req, res)=>
 { 
   const productData = await Listing.findAll({
     attributes: [
             'product_name',
             'price',
-            //'description',
-            'seller_location'
-            //'order_date_and_time'
+            'description',
+            'brand',
+            'product_condition',
+            'category'
         ]
 });
 
     console.log("data need to be cleanup", productData);
     const actualProductData = productData.map(product => product.get({ plain: true }));
     console.log("updated data", actualProductData)
-  res.render('searchpage', { actualProductData });//{}used for array of data
+    res.render('searchpage', { actualProductData });//{}used for array of data
+  
 })
 
 
 
-router.get('/search', async (req, res) => {
+router.get('/', async (req, res) => {
+  console.log('Search request received'); 
   const searchLocation = req.query.location;
+  console.log('Search Location from the router:', searchLocation); // Log the search location
 
   try {
-    // Perform a database query using Sequelize
     const productDetails = await Listing.findAll({
       where: {
-        seller_location: searchLocation,
+        'seller_location': searchLocation
       },
-      attributes: ['product_name'],
-      include: [
-        // Include details if necessary
-      ]
+      attributes: ['product_name', 'price', 'seller_location']
     });
 
-    // Extract the necessary information from productDetails
-    const productNames = productDetails.map((product) => product.get({ plain : true}));
-    res.render('searchpage', { productDetails });
-    // Send the retrieved product names as a response
-    res.json(productNames);
-  } catch (error) {
-    console.error('Error:', error);
-    res.status(500).json({ error: 'An error occurred while fetching product details' });
-  }
-});
-/*
-router.get('/search', async (req, res) => {
-  const searchLocation = req.query.location;
-  //const searchPrice = req.query.price;
+    console.log("productdetails need to be cleanup", productDetails);
+    const actualProductDetails = productDetails.map(product => product.get({ plain: true }));
+    console.log("updated data", actualProductDetails);
 
-  try 
-  {
-    // Perform a database query using Sequelize
-    const productDetails = await Listing.findAll({
-      where: {
-        seller_location: searchLocation,
-        //price: searchPrice,
-      },
-      attributes: ['productName'],
-      include: [{
-        // Include details if necessary
-      }]
-    });
-
-
-    // Send the retrieved product details as a response
-    res.json(productDetails);
-    //we can use res.render('',table need to display)
+    res.set('Content-Type', 'application/json'); // Set the content-type header to application/json
+    //res.json(actualProductDetails); // Send the response as JSON
+    console.log(actualProductDetails);
+    res.render('searchpage', { actualProductDetails }); // Render the 'searchpage' view passing the actualProductDetails data
+    
   } catch (error) {
     console.error('Error:', error);
     res.sendStatus(500);
   }
-});*/
-
-//export the module*/
+});
 module.exports = router;

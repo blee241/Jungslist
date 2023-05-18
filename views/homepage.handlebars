@@ -1,34 +1,42 @@
- <header class="bg-tahiti-500">
-        <nav class="bg-gray-500">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex justify-between items-center py-4 px-4">
-                <div><h2 class="font-bold text-3xl">JungList</h2></div>
+<header class="bg-white-500">
+    <nav class="bg-gradient-to-r from-blue-300 to-blue-600">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-center py-4 px-4">
+                <div class="flex items-center ml-4">
+                    <h2 class="font-bold text-3xl text-black .text-rubik">JungsList</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-check-fill ml-2" viewBox="0 0 16 16">
+                        <path
+                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                    </svg>
+                </div>
+
                 <div class="flex space-x-8">
-                    <a href="/sign-up" class="font-bold text-1xl">Create Account</a>
-                    <a href="#" class="font-bold text-1xl">Logout</a>
-                    <a href="/new-listing" class="font-bold text-1xl">Create Listing</a>
+                    <a href="/sign-up" class="font-bold text-1x text-black .text-rubik">Create Account</a>
+                    <a href="#" class="font-bold text-1xl text-black .text-rubik">Logout</a>
+                    <a href="/new-listing" class="font-bold text-1xl text-black .text-rubik">Create Listing</a>
                 </div>
             </div>
-        </nav>
-    </header>
-   <main class="bg-slate-500">
-    
+    </nav>
+</header>
+
+<main class="bg-white-500 flex justify-center items-center mt-20">
     <main class="container">
-    <h3>Input your user info here!</h3>
-    <form class="form login-form">
-         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password-login">
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+        <h3 class="mb-14">Input your user info here!</h3>
+        <form class="form login-form">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text text-xs">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password-login">
+            </div>
+            <button type="submit" class="btn btn-primary text-black border-black">Login</button>
+        </form>
+    </main>
 </main>
 
-   </main>
 
-  <script src="./js/login.js"></script>
+<script src="./js/login.js"></script>

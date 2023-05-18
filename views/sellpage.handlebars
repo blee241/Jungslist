@@ -1,24 +1,46 @@
-<section class="container bg-neutral-400">
-  <button id="sell-go-back"
-    class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Back to Search</button>
-  <button id="sell-go-create"
-    class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Create Listing</button>
-  <button id="sell-go-logout"
-    class="btn btn-primary rounded-full bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Logout</button>
+<section class="bg-gradient-to-r from-blue-300 to-blue-600">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold text-black text-rubik" href="#">Jungslist</a>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-cart-check-fill ml-2" viewBox="0 0 16 16">
+        <path
+          d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
+      </svg>
+      <div class="ml-auto">
+        <button id="sell-go-back"
+          class="btn btn-primary bg-gradient-to-r from-blue-300 to-blue-600 hover:bg-black text-black text-rubik">Back
+          to Search</button>
+        <button id="sell-go-create"
+          class="btn btn-primary bg-gradient-to-r from-blue-300 to-blue-600 hover:bg-black text-black text-rubik">Create
+          Listing</button>
+        <button id="sell-go-logout"
+          class="btn btn-primary rounded-full bg-gradient-to-r from-blue-300 to-blue-600 hover:bg-black text-black text-rubik">Logout</button>
+      </div>
+    </div>
+  </nav>
 
-  {{#each cleanListingData as |listing|}}
-  <section class="container lg" id="{{listing.id}}">
-    {{listing.product_condition}} {{listing.brand}} {{listing.product_name}} {{listing.category}} for ${{listing.price}}
-    <br>
-    Location: {{listing.seller_location}}
-    <br>
-    Posted {{listing.order_date_and_time}}
-    <br>
-    Item description: {{listing.description}}
-    <button class="delete-button" data-listing-id="{{listing.id}}">Delete Listing</button>
-    <hr>
+  <section class="flex items-center justify-center h-screen">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        {{#each cleanListingData as |listing|}}
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{listing.product_name}}</h5>
+              <p class="card-text">Price: ${{listing.price}}</p>
+              <p class="card-text">Location: {{listing.seller_location}}</p>
+              <p class="card-text">Posted {{listing.order_date_and_time}}</p>
+              <p class="card-text">Item description: {{listing.description}}</p>
+              <button class="delete-button" data-listing-id="{{listing.id}}">Delete Listing</button>
+              <hr>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
   </section>
-  {{/each}}
 </section>
 
 <script src="/js/delete-listing.js"></script>

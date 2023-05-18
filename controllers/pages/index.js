@@ -6,7 +6,7 @@ const sellerPage = require('./seller-page');
 const newListingPage = require('./new-listing-page');
 const api = require('./api');
 
-// localhost:3001/p
+// localhost:3001/
 router.use('/', homepage);
 
 // localhost:3001/sign-up

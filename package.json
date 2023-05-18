@@ -11,8 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
+    "axios": "^1.4.0",
+=======
     "autoprefixer": "^10.4.14",
     "bcrypt": "^5.1.0",
+>>>>>>> 36110abf41fff8ae568672eca447bda8afa33cc3
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",

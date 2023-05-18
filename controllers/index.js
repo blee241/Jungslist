@@ -4,14 +4,23 @@ const listing = require('./listing/listing');
 
 
 
-const apiRoutes = require('./api');
+
+//localhost:3001/
+router.use("/", pages);
 
 
-router.use('/api', apiRoutes);
+module.exports = router;
 
-// localhost:3001/
-router.use('/', pages);
 
+<<<<<<< HEAD
+
+
+/*
+router.get('/',(req,res) =>
+{
+    res.json("hi");
+})*/
+=======
 router.use('/listing', listing);
 
 
@@ -19,3 +28,4 @@ router.use('/listing', listing);
 
 
 module.exports = router;
+>>>>>>> 36110abf41fff8ae568672eca447bda8afa33cc3

@@ -29,7 +29,7 @@ const listFormSubmit = async (e) => {
     const locatValue = document.getElementById('locationInput').value;
     console.log(locatValue);
 
-    const postValue = await fetch('/listing/new-listing', {
+    const postValue = await fetch('/api/listing/new-listing', {
         method: 'POST',
         body: JSON.stringify({
             product_name: nameValue,

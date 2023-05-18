@@ -51,7 +51,8 @@ Listing.init({
         defaultValue: DataTypes.NOW
     },
     seller_location: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     }
 },{
     sequelize,

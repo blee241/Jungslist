@@ -1,8 +1,8 @@
-<section class="container bg-blue-400">
-  <button id="home-go" class="btn btn-primary bg-blue-700 hover:bg-black text-lime-300 grid justify-items-end"><a
+{{!-- <section class="container bg-gradient-to-r from-blue-300 to-blue-600">
+  <button id="home-go" class="btn btn-primary bg-gradient-to-r from-blue-300 to-blue-600 hover:bg-black text-lime-300 grid justify-items-end"><a
       href="/">Home</a></button>
   <button id="listings-go"
-    class="btn btn-primary  rounded-full bg-blue-700 hover:bg-black text-lime-300 grid justify-items-end"><a
+    class="btn btn-primary  rounded-full bg-gradient-to-r from-blue-300 to-blue-600 hover:bg-black text-lime-300 grid justify-items-end"><a
       href="/search">Search Listing</a></button>
   <form id="listForm">
 
@@ -48,8 +48,58 @@
     </div>
 
     <button id="list-submit" type="submit"
-      class="btn btn-primary bg-blue-700 text-lime-300 hover:bg-black">Submit</button>
+      class="btn btn-primary bg-gradient-to-r from-blue-300 to-blue-600 text-lime-300 hover:bg-black">Submit</button>
   </form>
 
+</section>
+<script src="/js/list.js"></script> --}}
+
+
+<section class="container bg-gradient-to-r from-blue-300 to-blue-600">
+  <a href="/" class="btn btn-primary bg-gradient-to-r from-blue-300 to-blue-600 hover:bg-blue-200 text-black grid justify-items-end border-none text-rubik">Home</a>
+  <a href="/search" class="btn btn-primary rounded-full bg-gradient-to-r from-blue-300 to-blue-600 hover:bg-blue-200 text-black grid justify-items-end border-none text-rubik">Search Listing</a>
+  <form id="listForm">
+    <div class="mb-3">
+      <label for="pdName" class="form-label text-rubik">Product Name</label>
+      <input id="pdNameInput" aria-describedby="pdnameHelp">
+      <div id="pdname" class="form-text text-lime-300">What is the name of your product?</div>
+    </div>
+    <div class="mb-3">
+      <label for="cat" class="form-label text-rubik">Category</label>
+      <input id="categoryInput" aria-describedby="catHelp">
+      <div id="catHelp" class="form-text text-lime-300">What category would this item belong to?</div>
+    </div>
+    <div class="mb-3">
+      <label for="pdCond" class="form-label text-rubik">Product Condition</label>
+      <input id="pdCondInput" aria-describedby="pdCondHelp">
+      <div id="pdCondHelp" class="form-text text-lime-300">What condition is your product in?</div>
+    </div>
+    <div class="mb-3">
+      <label for="quantity" class="form-label text-rubik">Quantity</label>
+      <input id="quantityInput" aria-describedby="quantHelp">
+      <div id="quantHelp" class="form-text text-lime-300">How many do you have to sell?</div>
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label text-rubik">Price</label>
+      <input id="priceInput" aria-describedby="priceHelp">
+      <div id="priceHelp" class="form-text text-lime-300">Format: 0000.00</div>
+    </div>
+    <div class="mb-3">
+      <label for="branding" class="form-label text-rubik">Brand</label>
+      <input id="brandInput" aria-describedby="brandHelp">
+      <div id="brandHelp" class="form-text text-lime-300">What namebrand is your item?</div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label text-rubik">Description</label>
+      <input id="descriptionInput" aria-describedby="emailHelp">
+      <div id="descHelp" class="form-text text-lime-300">How would you describe your item?</div>
+    </div>
+    <div class="mb-3">
+      <label for="location" class="form-label text-rubik">Location</label>
+      <input id="locationInput">
+      <div id="locationHelp" class="form-text text-lime-300">Where are you located?</div>
+    </div>
+    <button id="list-submit" type="submit" class="btn btn-primary bg-gradient-to-r from-blue-300 to-blue-600 text-lime-300 hover:bg-black">Submit</button>
+  </form>
 </section>
 <script src="/js/list.js"></script>

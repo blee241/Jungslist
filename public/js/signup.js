@@ -6,9 +6,9 @@ const locationEl = document.getElementById("locationInput");
 
 //prevent form from submitting to allow us to validate inputs//
 form.addEventListener("submit", e => {
-e.preventDefault();
+    e.preventDefault();
 
-validateInputs();
+    validateInputs();
 });
 //creating the error message and border to appear//
 const createError = (element, message) => {
@@ -37,26 +37,26 @@ const validateInputs = () => {
     const passwordData = pw.value.trim();
     const confirmPwData = confirmPw.value.trim();
     const locationData = locationEl.value.trim();
-    if(emailData === "") {
+    if (emailData === "") {
         createError(email, "Email is Required");
     } else if (!validateEmail(emailData)) {
         createError(email, "Please provide a valid email address");
     } else {
         createSuccess(email);
     }
-    if(passwordData === "") {
+    if (passwordData === "") {
         createError(pw, "Please provide a password");
     } else {
         createSuccess(pw);
     }
-    if(confirmPwData === "") {
+    if (confirmPwData === "") {
         createError(confirmPw, "Please confirm your password");
     } else if (passwordData !== confirmPwData) {
         createError(confirmPw, "Passwords do not match");
     } else {
         createSuccess(confirmPw);
     }
-    if(locationData === "") {
+    if (locationData === "") {
         createError(locationEl, "Location is Required");
     } else {
         createSuccess(locationEl);

@@ -1,7 +1,9 @@
 const loginForm = async (event) => {
   event.preventDefault();
+
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
+
   if (email && password) {
     const response = await fetch('/api/users/login', {
       method: 'POST',
@@ -18,7 +20,7 @@ const loginForm = async (event) => {
       localStorage.setItem('id', exportThisID);
       
       // Redirect the browser to the search page
-      const searchpage = '/search'; 
+      const searchpage = '/search';
       window.location.replace(searchpage);
     } else {
       alert(response.statusText);

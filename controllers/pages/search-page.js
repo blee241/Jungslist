@@ -41,7 +41,7 @@ router.get('/', async (req, res) => {
       filteredProductData = actualProductData.filter(product => product.seller_location === searchLocation);
       console.log("filtered data: ", filteredProductData);
       //res.json({ filteredProductData });
-        res.render('searchpage', {filteredProductData:filteredProductData, actualProductData });
+       res.render('searchpage', {filteredProductData:filteredProductData, actualProductData });
        
     } else {
         res.render('searchpage', { actualProductData, filteredProductData:null });

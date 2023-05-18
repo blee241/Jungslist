@@ -39,7 +39,7 @@ const listFormSubmit = async (e) => {
             price: priceValue,
             brand: brandValue,
             description: descrValue,
-            seller_location: locatValue
+            seller_location: locatValue,
         }),
         headers: { 'Content-Type': 'application/json' },
     })

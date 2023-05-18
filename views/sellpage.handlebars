@@ -1,7 +1,7 @@
 <section class="container bg-neutral-400">
-  <button id="listings-go-back" class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Back to Search</button>
-  <button id="listings-go-create" class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Create Listing</button>
-  <button id="listings-go-logout" class="btn btn-primary rounded-full bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Logout</button>
+  <button id="sell-go-back" class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Back to Search</button>
+  <button id="sell-go-create" class="btn btn-primary bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Create Listing</button>
+  <button id="sell-go-logout" class="btn btn-primary rounded-full bg-amber-400 hover:bg-black text-lime-300 grid justify-items-end">Logout</button>
   
   {{#each cleanListingData as |listing|}}
     <section class="container lg" id="{{listing.id}}">
@@ -19,3 +19,4 @@
 </section>
 
 <script src="/js/delete-listing.js"></script>
+<script src="/js/sellpage-links.js"></script>

@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
-//const controllers = require('./controllers/pages');
+
 const exphbs = require('express-handlebars');
 const sequelize = require('./config/connection');
 const controllers = require('./controllers');
 const models = require('./models');
+
 
 
 const app = express();
@@ -36,4 +37,6 @@ sequelize.sync({force: false}).then(() => {
         console.log(`The server is running on PORT ${PORT}`);
     })
 });
+
+
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="css/signup-page.css">
+    <script src="../public/js/signup.js"></script>
+</head>
+ <header class="bg-tahiti-500">
+        <nav class="bg-gray-500">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex justify-between items-center py-4 px-4">
+                <div><h2 class="font-bold text-3xl">JungList</h2></div>
+                <div class="flex space-x-8">
+                    <a href="/sell" class="font-bold text-1xl">My Account</a>
+                    <a href="/homepage" class="font-bold text-1xl">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+   
+   <div class="container">
+        <!--where the data is being sent (action)-->
+        <form id="form" action="/">
+            <h1>Create a new account!</h1>
+            <div class="input-field"> 
+                <label for="emailInput">Email</label>
+                <input id="emailInput" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-field"> 
+                <label for="passwordInput">Password</label>
+                <input id="passwordInput" name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-field"> 
+                <label for="confirmPasswordInput">Confirm Password</label>
+                <input id="confirmPasswordInput" name="confirmPassword" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-field"> 
+                <label for="locationInput">Location</label>
+                <input id="locationInput" name="location" type="text">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    
+    
+
+   

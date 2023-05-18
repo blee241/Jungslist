@@ -12,7 +12,7 @@ const deleteListing = async (listingId) => {
       alert('Something went wrong');
     }
   } catch (error) {
-    console.error('Error occurred during delete operation', error);
+    
   }
 };
 deleteListingBtns.forEach((btn) => {

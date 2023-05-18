@@ -1,9 +1,10 @@
 const searchGoSellBtn = document.getElementById('search-go-sell');
 const searchGoLogoutBtn = document.getElementById('search-go-logout');
 
+const importID = localStorage.getItem('id');
+
 const sendToSell = () => {
-    console.log('hi')
-    window.location.replace(`/sell/user/1`)
+    window.location.replace(`/sell/user/${importID}`)
 }
 const sendToHome = () => window.location.replace('/')
 

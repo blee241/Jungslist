@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Listing extends Model {}
+class Listing extends Model { }
 
 Listing.init({
     id: {
@@ -35,7 +35,7 @@ Listing.init({
         allowNull: false,
     },
     price: {
-        type: DataTypes.DOUBLE(6,2),
+        type: DataTypes.DOUBLE(6, 2),
         allowNull: false,
     },
     brand: {
@@ -51,11 +51,12 @@ Listing.init({
         defaultValue: DataTypes.NOW
     },
     seller_location: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false
     }
-},{
+}, {
     sequelize,
-    timestamps: true,
+    timestamps: false,
     freezeTablename: true,
     modelName: 'listing'
 });

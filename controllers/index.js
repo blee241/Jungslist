@@ -9,8 +9,6 @@ const listing = require('./pages/api/listingRoutes');
 router.use("/", pages);
 
 
-module.exports = router;
-
 
 router.use('/listing', listing);
 

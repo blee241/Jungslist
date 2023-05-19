@@ -5,15 +5,11 @@ function handleSubmit(event) {
   const searchInput = document.getElementById('search-input');
   const location = searchInput.value;
 
-  console.log('Search Location:', location);
-
   searchInput.value = '';
   searchBox.innerHTML = '';
   //const productContainer = document.querySelector('.product-container');
   //productContainer.innerHTML = '';
 
-
-  
   fetch(`/api/search?location=${location}`, {
     method: 'GET',
     headers: {
@@ -24,10 +20,9 @@ function handleSubmit(event) {
       if (!response.ok) {
         throw new Error(`${response.status}`);
       }
-      console.log(response);
 
       const contentType = response.headers.get('Content-Type');
-      console.log('Content-Type:', contentType);
+
       return response.json();
     })
     .then(data => {
@@ -42,7 +37,7 @@ function handleSubmit(event) {
       });
     })
     .catch(error => {
-      console.log('Error:', error);
+
     });
     
 }

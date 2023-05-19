@@ -16,7 +16,7 @@
 
   ## Installation
 
-  The project should be launched as a website at LINK.
+  The project should be launched as a website at http://jungslist.herokuapp.com.
 
   ## Usage
 

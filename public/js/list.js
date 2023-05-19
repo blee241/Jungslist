@@ -26,6 +26,9 @@ const listFormSubmit = async (e) => {
 
     const locatValue = document.getElementById('locationInput').value;
 
+    const custIdVal = document.getElementById('custID').value;
+
+    const customerIDValue = localStorage.getItem('id');
 
     const postValue = await fetch('/api/listing/new-listing', {
         method: 'POST',
@@ -38,6 +41,7 @@ const listFormSubmit = async (e) => {
             brand: brandValue,
             description: descrValue,
             seller_location: locatValue,
+            customer_id: custIdVal,
         }),
         headers: { 'Content-Type': 'application/json' },
     })

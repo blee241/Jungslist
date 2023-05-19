@@ -7,11 +7,13 @@ router.get('/', (req, res) => {
 })
 */
 
-router.get('/', async (req, res) => {
+ router.get('/', async (req, res) => {
     const userData = await User.findAll({
         attributes: [
             'email',
-            'id'
+            'id',
+            'user_password',
+            'buyer_location'
         ]
     });
     console.log('Ugly sequelize data', userData);
@@ -21,5 +23,14 @@ router.get('/', async (req, res) => {
     res.render('signup-page', {prettyUserData});
 })
 
+ router.post("/sign-up", async (req, res) => {
+    const { email, user_password, buyer_location } = req.body;
+    const userData = await User.create({
+        email: email,
+        user_password: pw,
+        buyer_location: locationEl,
+    });
+    res.json(userData);
+})  
 
 module.exports = router;

@@ -1,0 +1,36 @@
+.product-list-container {
+    margin-top: 50px;
+  }
+.product-container button {
+    font-size: 56px;
+    height: 60px;
+  }
+  
+  .list-group-item {
+    font-size: 48px;
+  }
+  .navbar-brand a {
+    font-size: 6rem;
+  }
+  
+  .card {
+    border: 1px solid #c48080;
+    border-radius: 4px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-footer {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  .navbar-brand {
+    font-weight: bold;
+    color: white;
+  
+  }
+  .btn-custom {
+    background-color: hsl(236, 69%, 54%);  /* Set the desired background color */
+    color: #ffffff;  /* Set the desired text color */
+    font-size: 18px;  /* Set the desired font size */
+    /* Add any other desired styles */
+  }

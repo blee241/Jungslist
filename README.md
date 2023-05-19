@@ -16,7 +16,7 @@
 
   ## Installation
 
-  The project should be launched as a website at http://jungslist.herokuapp.com.
+  The project should be launched as a website at https://git.heroku.com/obscure-cliffs-55909.git.
 
   ## Usage
 

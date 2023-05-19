@@ -16,7 +16,7 @@
 
   ## Installation
 
-  The project should be launched as a website at https://git.heroku.com/obscure-cliffs-55909.git.
+  The project should be launched as a website at https://obscure-cliffs-55909.herokuapp.com/.
 
   ## Usage
 

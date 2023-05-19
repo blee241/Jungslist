@@ -49,6 +49,7 @@ router.get('/', async (req, res) => {
         res.status(400).json("Could not find based on City");
      }
 
+     
   } catch (error) {
       console.error('Error:', error);
       res.sendStatus(500);

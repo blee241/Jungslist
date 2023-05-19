@@ -5,6 +5,7 @@ const { Listing } = require('../../models');
 router.get('/', async (req, res) => {
     const listData = await Listing.findAll({
         attributes: [
+            'customer_id',
             'product_name',
             'category',
             'product_condition',

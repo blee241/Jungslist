@@ -1,3 +1,4 @@
+
 const form = document.getElementById("form");
 const email = document.getElementById("emailInput");
 const pw = document.getElementById("passwordInput");
@@ -32,7 +33,7 @@ const validateEmail = email => {
     return validEmailCharacters.test(String(email).toLowerCase());
 }
 //values for the input fields//
-const validateInputs = () => {
+const validateInputs =  async() => {
     const emailData = email.value.trim();
     const passwordData = pw.value.trim();
     const confirmPwData = confirmPw.value.trim();
@@ -61,4 +62,22 @@ const validateInputs = () => {
     } else {
         createSuccess(locationEl);
     }
+     
+    const postValue = await fetch('/api/signup/sign-up', {
+        method: 'POST',
+        body: JSON.stringify({
+            email: emailData,
+            user_password: passwordData,
+            buyer_location: locationData,
+
+        }),
+        headers: { 'Content-Type': 'application/json' },
+    })
+
+    if(postValue.ok) {
+        alert("You have created a new account!");
+    } else { 
+        alert('Something went wrong');
+    }
+
 }

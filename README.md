@@ -29,7 +29,7 @@
   Users can view and delete their own listings by clicking on 'My Listings'.
   ![My account page](./imgs/screenshot4.jpg)
   Users can create listings by clicking 'Create Listing'.
-  ![Create new listings](./imgs/screenshot4.jpg)
+  ![Create new listings](./imgs/screenshot5.jpg)
 
   ## License
 

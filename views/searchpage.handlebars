@@ -16,11 +16,19 @@
     </div>
   </div>
 </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 d-flex">
+      <input class="form-control form-control-lg mr-sm-2 flex-grow-1" type="text" id="search-input" placeholder="Enter Location to Search...">
+      <button class="btn btn-custom" id="search-button" type="button">Search</button>
+    </div>
+  </div>
+</div>
 
 <section class="product-container product-row mt-4">
   <div class="container">
     <div class="row">
-      {{#each actualProductData}}
+      {{#each actualProductData as |productData|}}
       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
         <div class="card h-100">
           <div class="card-body">
@@ -37,9 +45,9 @@
       {{/each}}
     </div>
   </div>
-
+  {{filteredProductData.0.product_name}}
   {{#if filteredProductData}}
-  <div class="container mt-4">
+  <div class="container mt-4" id="searchBox">
     <div class="row">
       {{#each filteredProductData}}
       <div class="col-lg-12">
@@ -55,11 +63,13 @@
     </div>
   </div>
   {{else}}
-  <div class="container mt-4">
-    <p>No filtered products found.</p>
+  <div class="container mt-4" id="searchBox">
+   <!--<p>No filtered products found.</p>-->
   </div>
   {{/if}}
 </section>
-
+</section>
+<link rel="stylesheet" href="./css/searchPage.css">
 <script src="./js/searchpage.js"></script>
+
 <script src="./js/searchpage-links.js"></script>
